@@ -59,10 +59,22 @@ nav{position:sticky;top:0;z-index:999;background:rgba(255,255,255,.97);backdrop-
 .ticker-tag{background:var(--orange);color:#fff;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;padding:0 1.2rem;height:100%;display:flex;align-items:center;white-space:nowrap;flex-shrink:0;font-weight:700;gap:.5rem;}
 .draft-pill{background:rgba(255,255,255,.25);color:#fff;font-size:.52rem;letter-spacing:.15em;padding:.15rem .5rem;border-radius:2px;font-weight:700;border:1px solid rgba(255,255,255,.4);}
 .ticker-scroll{flex:1;overflow:hidden;}
-.ticker-inner{display:flex;animation:tickroll 32s linear infinite;white-space:nowrap;}
+.ticker-inner{display:flex;animation:tickroll 20s linear infinite;white-space:nowrap;}
 .ticker-piece{font-size:.78rem;font-weight:600;color:var(--ink2);padding:0 2.5rem;}
 .ticker-sep{color:var(--orange);font-size:1rem;}
 @keyframes tickroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+/* ticker always visible including mobile */
+@media(max-width:768px){
+  .ticker-tag{font-size:.55rem;padding:0 .8rem;letter-spacing:.1em;}
+  .ticker-piece{font-size:.72rem;padding:0 1.5rem;}
+  .draft-pill{display:none;}
+}
+
+/* Mobile hero image strip */
+.hero-mob-img{display:none;width:100%;height:300px;overflow:hidden;position:relative;background:var(--orange);}
+.hero-mob-img img{width:100%;height:100%;object-fit:cover;object-position:center 20%;}
+.hero-mob-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(232,83,26,.6) 0%,transparent 60%);}
+.hero-mob-img-label{position:absolute;bottom:.8rem;left:1rem;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.8);font-weight:700;}
 
 /* HERO */
 #hero{min-height:calc(100vh - 145px);display:grid;grid-template-columns:1fr 420px;position:relative;overflow:hidden;background:var(--off);}
@@ -313,10 +325,8 @@ footer{background:var(--ink);border-top:3px solid var(--orange);}
   .gallery-section{padding:3.5rem 5%;}
   .gallery-grid{grid-template-columns:1fr 1fr;gap:4px;}
   .gitem:first-child{grid-column:span 2;aspect-ratio:4/3;}
-  .hero-left{padding:2.5rem 5%;grid-template-columns:1fr;gap:1.5rem;}
-  .hero-portrait-wrap{flex-direction:row;align-items:flex-start;gap:1rem;}
-  .hero-portrait-frame{width:130px;height:170px;flex-shrink:0;}
-  .hero-portrait-nameplate{width:130px;font-size:.75rem;padding:.4rem .5rem;}
+  .hero-left{padding:2.5rem 5%;}
+  .hero-mob-img{display:block;}
   .hero-stats{grid-template-columns:1fr 1fr;}
   .vision-grid{grid-template-columns:1fr;}
   .stats-row{grid-template-columns:1fr 1fr;}
@@ -352,10 +362,10 @@ footer{background:var(--ink);border-top:3px solid var(--orange);}
   </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
+    <li><a href="#gallery">Gallery</a></li>
     <li><a href="#journey">Journey</a></li>
     <li><a href="#vision">Vision</a></li>
     <li><a href="#achievements">Work</a></li>
-    <li><a href="#gallery">Gallery</a></li>
     <li><a href="#press">Press</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -365,10 +375,10 @@ footer{background:var(--ink);border-top:3px solid var(--orange);}
 
 <div class="mob-menu" id="mobMenu">
   <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#gallery" onclick="closeMenu()">Gallery</a>
   <a href="#journey" onclick="closeMenu()">Journey</a>
   <a href="#vision" onclick="closeMenu()">Vision</a>
   <a href="#achievements" onclick="closeMenu()">Achievements</a>
-  <a href="#gallery" onclick="closeMenu()">Gallery</a>
   <a href="#press" onclick="closeMenu()">Press</a>
   <a href="#contact" onclick="closeMenu()">Contact</a>
 </div>
@@ -390,6 +400,13 @@ footer{background:var(--ink);border-top:3px solid var(--orange);}
     <div class="ticker-piece">BJP Aspirant &mdash; Anandapur (SC-22), Keonjhar, Odisha</div><span class="ticker-sep">&nbsp;&bull;&nbsp;</span>
     <div class="ticker-piece">&#x26A0;&#xFE0F; Draft Website &mdash; Content &amp; Photos May Change</div><span class="ticker-sep">&nbsp;&bull;&nbsp;</span>
   </div></div>
+</div>
+
+<!-- MOBILE HERO IMAGE (visible only on mobile) -->
+<div class="hero-mob-img">
+  <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1779710820/b1e1f4a2-dbde-4c41-b95d-8e74a92504c8_xfo4eh.png" alt="Sarat Kumar Sethy">
+  <div class="hero-mob-img-overlay"></div>
+  <div class="hero-mob-img-label">Sarat Kumar Sethy &middot; BJP &middot; Anandapur SC-22</div>
 </div>
 
 <!-- HERO -->
@@ -480,6 +497,47 @@ footer{background:var(--ink);border-top:3px solid var(--orange);}
   </div>
 </section>
 
+<!-- GALLERY -->
+<section id="gallery" class="gallery-section">
+  <div class="s-eyebrow rv"><span>Photo Gallery</span></div>
+  <h2 class="s-title rv">On the <span class="hi">Ground</span></h2>
+  <div class="s-rule rv"></div>
+  <p class="s-sub rv">Moments from the field &mdash; community events, party activities, and grassroots work across Keonjhar and Anandapur constituency.</p>
+  <div class="gallery-grid">
+    <div class="gitem rv" onclick="openLb(0)">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1779777042/12db46f3-4977-4284-8e54-36dc094e7711_1_m8wnpw.png" alt="Community Event" loading="lazy">
+      <div class="gitem-overlay"></div>
+      <div class="gitem-caption">Community Event</div>
+    </div>
+    <div class="gitem rv d1" onclick="openLb(1)">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1779775378/8469c3ca-7404-4758-a3ef-d60827c44ff0_rjrirg.jpg" alt="BJP Activity" loading="lazy">
+      <div class="gitem-overlay"></div>
+      <div class="gitem-caption">BJP Activity</div>
+    </div>
+    <div class="gitem rv d2" onclick="openLb(2)">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1779775378/WhatsApp_Image_2026-05-25_at_10.11.45_ev37in.jpg" alt="Grassroots Outreach" loading="lazy">
+      <div class="gitem-overlay"></div>
+      <div class="gitem-caption">Grassroots Outreach</div>
+    </div>
+    <div class="gitem rv d3" onclick="openLb(3)">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1779775378/WhatsApp_Image_2026-05-25_at_10.11.46_hiywnm.jpg" alt="Party Programme" loading="lazy">
+      <div class="gitem-overlay"></div>
+      <div class="gitem-caption">Party Programme</div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" onclick="closeLbOutside(event)">
+  <div class="lb-inner">
+    <button class="lb-close" onclick="closeLb()">&times;</button>
+    <button class="lb-prev" onclick="lbStep(-1)">&#8249;</button>
+    <img class="lb-img" id="lbImg" src="" alt="">
+    <button class="lb-next" onclick="lbStep(1)">&#8250;</button>
+    <div class="lb-counter" id="lbCounter"></div>
+  </div>
+</div>
+
 <!-- JOURNEY -->
 <section id="journey" class="section alt">
   <div class="s-eyebrow rv"><span>Career &amp; Service</span></div>
@@ -553,47 +611,6 @@ footer{background:var(--ink);border-top:3px solid var(--orange);}
     <div class="pc rv"><div class="pc-src">District Cooperative Report</div><div class="pc-hl">Under Sethy's leadership, two directors elected to DCB and State Co-operative Bank, Bhubaneswar &mdash; milestone for Keonjhar cooperatives</div><div class="pc-dt">2015</div></div>
   </div>
 </section>
-
-<!-- GALLERY -->
-<section id="gallery" class="gallery-section">
-  <div class="s-eyebrow rv"><span>Photo Gallery</span></div>
-  <h2 class="s-title rv">On the <span class="hi">Ground</span></h2>
-  <div class="s-rule rv"></div>
-  <p class="s-sub rv">Moments from the field &mdash; community events, party activities, and grassroots work across Keonjhar and Anandapur constituency.</p>
-  <div class="gallery-grid">
-    <div class="gitem rv" onclick="openLb(0)">
-      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1779775378/WhatsApp_Image_2026-05-25_at_10.11.47_dzxeus.jpg" alt="Community Event" loading="lazy">
-      <div class="gitem-overlay"></div>
-      <div class="gitem-caption">Community Event</div>
-    </div>
-    <div class="gitem rv d1" onclick="openLb(1)">
-      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1779775378/8469c3ca-7404-4758-a3ef-d60827c44ff0_rjrirg.jpg" alt="BJP Activity" loading="lazy">
-      <div class="gitem-overlay"></div>
-      <div class="gitem-caption">BJP Activity</div>
-    </div>
-    <div class="gitem rv d2" onclick="openLb(2)">
-      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1779775378/WhatsApp_Image_2026-05-25_at_10.11.45_ev37in.jpg" alt="Grassroots Outreach" loading="lazy">
-      <div class="gitem-overlay"></div>
-      <div class="gitem-caption">Grassroots Outreach</div>
-    </div>
-    <div class="gitem rv d3" onclick="openLb(3)">
-      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1779775378/WhatsApp_Image_2026-05-25_at_10.11.46_hiywnm.jpg" alt="Party Programme" loading="lazy">
-      <div class="gitem-overlay"></div>
-      <div class="gitem-caption">Party Programme</div>
-    </div>
-  </div>
-</section>
-
-<!-- LIGHTBOX -->
-<div class="lb" id="lb" onclick="closeLbOutside(event)">
-  <div class="lb-inner">
-    <button class="lb-close" onclick="closeLb()">&times;</button>
-    <button class="lb-prev" onclick="lbStep(-1)">&#8249;</button>
-    <img class="lb-img" id="lbImg" src="" alt="">
-    <button class="lb-next" onclick="lbStep(1)">&#8250;</button>
-    <div class="lb-counter" id="lbCounter"></div>
-  </div>
-</div>
 
 <!-- CONTACT -->
 <section id="contact">
@@ -695,7 +712,7 @@ function handleSubmit(btn){
   setTimeout(function(){btn.textContent='Submit Message \u2192';btn.style.background='';},3500);
 }
 var lbImgs=[
-  'https://res.cloudinary.com/dxmdcoca3/image/upload/v1779775378/WhatsApp_Image_2026-05-25_at_10.11.47_dzxeus.jpg',
+  'https://res.cloudinary.com/dxmdcoca3/image/upload/v1779777042/12db46f3-4977-4284-8e54-36dc094e7711_1_m8wnpw.png',
   'https://res.cloudinary.com/dxmdcoca3/image/upload/v1779775378/8469c3ca-7404-4758-a3ef-d60827c44ff0_rjrirg.jpg',
   'https://res.cloudinary.com/dxmdcoca3/image/upload/v1779775378/WhatsApp_Image_2026-05-25_at_10.11.45_ev37in.jpg',
   'https://res.cloudinary.com/dxmdcoca3/image/upload/v1779775378/WhatsApp_Image_2026-05-25_at_10.11.46_hiywnm.jpg'
