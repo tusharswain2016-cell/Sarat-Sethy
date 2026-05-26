@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sarat Kumar Sethy | BJP Anandapur (SC-22)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#FFFFFF;
+  --off:#FFF8F3;
+  --off2:#FFF0E6;
+  --orange:#E8531A;
+  --orange2:#FF6B35;
+  --orange3:#FFB347;
+  --orange-pale:#FFF0E6;
+  --orange-mid:rgba(232,83,26,0.12);
+  --ink:#1C0A00;
+  --ink2:#3D1A00;
+  --mid:#8A6555;
+  --light:#C4A898;
+  --border:rgba(232,83,26,0.15);
+  --border2:rgba(232,83,26,0.3);
+  --shadow:0 4px 32px rgba(232,83,26,0.1);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--white);color:var(--ink);overflow-x:hidden;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-thumb{background:var(--orange);}
+
+/* MASTHEAD */
+.masthead{background:var(--orange);padding:.55rem 5%;display:flex;align-items:center;justify-content:space-between;font-family:'Plus Jakarta Sans',sans-serif;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.85);}
+.mh-center{display:flex;gap:2rem;}
+@media(max-width:768px){.mh-center{display:none;}}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:999;background:rgba(255,255,255,.97);backdrop-filter:blur(20px);border-bottom:2px solid var(--orange);padding:0 5%;height:72px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 20px rgba(232,83,26,0.08);}
+.logo{display:flex;align-items:center;gap:.9rem;text-decoration:none;}
+.logo-mark{width:44px;height:44px;background:var(--orange);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);}
+.logo-text .l1{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:700;color:var(--ink);line-height:1;}
+.logo-text .l2{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);font-weight:600;}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);text-decoration:none;font-weight:600;transition:color .2s;position:relative;padding-bottom:2px;}
+.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;background:var(--orange);transform:scaleX(0);transition:transform .25s;}
+.nav-links a:hover,.nav-links a.act{color:var(--orange);}
+.nav-links a:hover::after,.nav-links a.act::after{transform:scaleX(1);}
+.nav-cta{background:var(--orange);color:#fff;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;padding:.6rem 1.6rem;text-decoration:none;font-weight:600;transition:all .2s;border-radius:2px;}
+.nav-cta:hover{background:var(--orange2);}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.ham span{width:22px;height:2px;background:var(--ink);display:block;}
+.mob-menu{display:none;position:fixed;top:72px;left:0;right:0;background:var(--white);border-bottom:2px solid var(--orange);padding:1.5rem 5%;z-index:998;flex-direction:column;gap:.5rem;}
+.mob-menu.open{display:flex;}
+.mob-menu a{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);text-decoration:none;padding:.6rem 0;border-bottom:1px solid var(--border);font-weight:600;}
+
+/* TICKER */
+.ticker-bar{background:var(--off2);border-bottom:1px solid var(--border2);height:36px;display:flex;align-items:center;overflow:hidden;position:relative;}
+.ticker-tag{background:var(--orange);color:#fff;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;padding:0 1.2rem;height:100%;display:flex;align-items:center;white-space:nowrap;flex-shrink:0;font-weight:700;gap:.5rem;}
+.draft-pill{background:rgba(255,255,255,.25);color:#fff;font-size:.52rem;letter-spacing:.15em;padding:.15rem .5rem;border-radius:2px;font-weight:700;border:1px solid rgba(255,255,255,.4);}
+.ticker-scroll{flex:1;overflow:hidden;}
+.ticker-inner{display:flex;animation:tickroll 32s linear infinite;white-space:nowrap;}
+.ticker-piece{font-size:.78rem;font-weight:600;color:var(--ink2);padding:0 2.5rem;}
+.ticker-sep{color:var(--orange);font-size:1rem;}
+@keyframes tickroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* HERO */
+#hero{min-height:calc(100vh - 145px);display:grid;grid-template-columns:1fr 420px;position:relative;overflow:hidden;background:var(--off);}
+.hero-bg-pattern{position:absolute;inset:0;opacity:.04;background-image:radial-gradient(circle,var(--orange) 1.5px,transparent 1.5px);background-size:28px 28px;}
+
+/* Hero left — single text column */
+.hero-left{padding:4rem 5% 4rem 8%;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2;}
+
+/* Hero text */
+.hero-text{}
+.hero-tag{display:inline-flex;align-items:center;gap:.6rem;background:var(--orange);color:#fff;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;padding:.45rem 1rem;font-weight:700;margin-bottom:1.6rem;width:fit-content;}
+.hero-tag::before{content:'';width:6px;height:6px;background:#fff;border-radius:50%;}
+.hero-name{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,4.5vw,4.8rem);font-weight:700;line-height:.95;color:var(--ink);margin-bottom:.4rem;}
+.hero-name .firstname{display:block;color:var(--ink);}
+.hero-name .surname{display:block;color:var(--orange);font-style:italic;}
+.hero-divider{display:flex;align-items:center;gap:1rem;margin:1.3rem 0;}
+.hero-divider::before,.hero-divider::after{content:'';flex:1;max-width:60px;height:1px;background:var(--border2);}
+.hero-divider span{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);font-weight:700;}
+.hero-constituency{display:flex;align-items:center;gap:.8rem;padding:.7rem 1rem;background:var(--white);border:1px solid var(--border2);border-left:4px solid var(--orange);margin-bottom:1.6rem;width:fit-content;}
+.hero-constituency strong{font-size:.95rem;font-weight:700;color:var(--orange);}
+.hero-constituency span{font-size:.78rem;color:var(--mid);}
+.hero-desc{font-size:.9rem;line-height:1.85;color:var(--mid);max-width:440px;margin-bottom:2rem;}
+.hero-btns{display:flex;gap:.8rem;flex-wrap:wrap;}
+.btn-orange{background:var(--orange);color:#fff;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;padding:.9rem 2.2rem;text-decoration:none;font-weight:700;transition:all .2s;display:inline-block;border-radius:2px;}
+.btn-orange:hover{background:var(--orange2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,83,26,.3);}
+.btn-outline{border:2px solid var(--orange);color:var(--orange);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;padding:.9rem 2.2rem;text-decoration:none;font-weight:700;transition:all .2s;border-radius:2px;}
+.btn-outline:hover{background:var(--orange);color:#fff;}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:2.5rem;border:1px solid var(--border2);background:var(--white);}
+.hstat{padding:1.2rem 1rem;text-align:center;border-right:1px solid var(--border);position:relative;}
+.hstat:last-child{border-right:none;}
+.hstat-n{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:.05em;color:var(--orange);display:block;line-height:1;}
+.hstat-l{font-size:.57rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);display:block;margin-top:.2rem;font-weight:600;}
+
+/* Hero right — full photo panel */
+.hero-right{position:relative;overflow:hidden;}
+.hero-right-photo{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;}
+.hero-right-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(232,83,26,.72) 0%,rgba(232,83,26,.1) 55%,transparent 100%);pointer-events:none;}
+.hero-right-caption{position:absolute;bottom:0;left:0;right:0;padding:2rem 1.8rem;z-index:2;}
+.hero-right-name{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:#fff;line-height:1.1;margin-bottom:.3rem;}
+.hero-right-const{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75);font-weight:600;margin-bottom:1rem;}
+.hero-right-badges{display:flex;flex-direction:column;gap:.4rem;}
+.hrb{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:.4rem .7rem;font-size:.68rem;color:#fff;font-weight:600;backdrop-filter:blur(8px);}
+/* draft watermark on right panel */
+.hero-right-draft{position:absolute;top:1rem;right:1rem;background:rgba(0,0,0,.45);color:rgba(255,255,255,.7);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;padding:.3rem .7rem;border:1px solid rgba(255,255,255,.2);z-index:3;font-weight:700;}
+
+/* SECTIONS */
+.section{padding:5.5rem 8%;}
+.section.alt{background:var(--off);}
+.section.orange-bg{background:var(--orange);}
+.s-eyebrow{display:flex;align-items:center;gap:.8rem;margin-bottom:.6rem;}
+.s-eyebrow::before{content:'';width:24px;height:3px;background:var(--orange);}
+.s-eyebrow span{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);font-weight:700;}
+.s-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,3.5vw,3rem);font-weight:700;line-height:1.1;color:var(--ink);margin-bottom:.5rem;}
+.s-title .hi{color:var(--orange);font-style:italic;}
+.s-title.lt{color:#fff;}
+.s-title.lt .hi{color:var(--orange3);}
+.s-rule{width:50px;height:3px;background:var(--orange);margin:1rem 0 2.5rem;}
+.s-rule.lt{background:rgba(255,255,255,.4);}
+.s-sub{font-size:.93rem;color:var(--mid);line-height:1.8;max-width:500px;margin-bottom:2.5rem;}
+.s-sub.lt{color:rgba(255,255,255,.7);}
+
+/* ABOUT */
+.about-wrap{display:grid;grid-template-columns:280px 1fr;gap:4rem;align-items:start;}
+.profile-card{background:var(--white);border:1px solid var(--border2);overflow:hidden;box-shadow:var(--shadow);position:sticky;top:9rem;}
+.profile-top{background:var(--orange);padding:2rem 1.5rem;display:flex;flex-direction:column;align-items:center;gap:.8rem;}
+.profile-avatar{width:100px;height:100px;background:rgba(255,255,255,.15);border:3px solid rgba(255,255,255,.4);border-radius:50%;overflow:hidden;flex-shrink:0;}
+.profile-avatar img{width:100%;height:100%;object-fit:cover;object-position:center top;}
+.profile-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:#fff;text-align:center;}
+.profile-sub{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.7);text-align:center;font-weight:600;}
+.profile-data{padding:1rem 1.2rem;}
+.prow{display:flex;justify-content:space-between;gap:.5rem;padding:.5rem 0;border-bottom:1px solid var(--border);}
+.prow:last-child{border:none;}
+.pk{font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--light);font-weight:700;flex-shrink:0;}
+.pv{font-size:.8rem;font-weight:700;color:var(--ink);text-align:right;}
+.about-content{}
+.about-quote{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-style:italic;color:var(--ink);line-height:1.6;padding:1.2rem 1.5rem;border-left:4px solid var(--orange);background:var(--orange-pale);margin-bottom:2rem;}
+.about-body{font-size:.93rem;color:var(--mid);line-height:1.9;margin-bottom:.9rem;}
+.about-facts{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--border2);margin-top:2rem;}
+.af{padding:.9rem 1.1rem;border-right:1px solid var(--border);border-bottom:1px solid var(--border);}
+.af:nth-child(2n){border-right:none;}
+.af:nth-last-child(-n+2){border-bottom:none;}
+.af-k{font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);font-weight:700;margin-bottom:.2rem;}
+.af-v{font-size:.85rem;font-weight:700;color:var(--ink);}
+
+/* TIMELINE */
+.timeline{position:relative;}
+.timeline::before{content:'';position:absolute;left:110px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--orange),var(--orange3));}
+.te{display:grid;grid-template-columns:110px 1fr;gap:2.5rem;padding:2rem 0;border-bottom:1px solid var(--border);}
+.te:last-child{border:none;}
+.te::after{content:'';position:absolute;left:105px;top:2.3rem;width:12px;height:12px;border-radius:50%;background:var(--orange);border:3px solid var(--off);box-shadow:0 0 0 3px rgba(232,83,26,.2);}
+.te-year{font-family:'Bebas Neue',sans-serif;font-size:.9rem;letter-spacing:.1em;color:var(--orange);text-align:right;padding-top:.3rem;}
+.te-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--ink);margin-bottom:.4rem;}
+.te-desc{font-size:.85rem;color:var(--mid);line-height:1.75;}
+
+/* VISION */
+.vision-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;}
+.vc{background:var(--white);border:1px solid var(--border2);padding:2rem 1.6rem;position:relative;overflow:hidden;transition:all .25s;cursor:default;}
+.vc:hover{border-color:var(--orange);box-shadow:0 8px 32px rgba(232,83,26,.12);transform:translateY(-3px);}
+.vc-stripe{position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(to right,var(--orange),var(--orange3));}
+.vc-num{font-family:'Bebas Neue',sans-serif;font-size:3.5rem;color:rgba(232,83,26,.06);position:absolute;top:.2rem;right:.8rem;line-height:1;}
+.vc-icon{font-size:1.8rem;margin-bottom:.8rem;display:block;}
+.vc-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--ink);margin-bottom:.4rem;}
+.vc-text{font-size:.83rem;color:var(--mid);line-height:1.75;}
+
+/* ACHIEVEMENTS */
+.ach-section{padding:5.5rem 8%;background:var(--orange);}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(255,255,255,.15);margin-top:2.5rem;}
+.sbox{background:rgba(255,255,255,.08);padding:2rem 1.5rem;text-align:center;transition:background .2s;}
+.sbox:hover{background:rgba(255,255,255,.15);}
+.sbox-n{font-family:'Bebas Neue',sans-serif;font-size:2.8rem;letter-spacing:.05em;color:#fff;line-height:1;margin-bottom:.3rem;}
+.sbox-n sup{font-size:1.3rem;}
+.sbox-l{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:600;}
+.hl-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:1.5rem;}
+.hl{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:1.8rem;position:relative;}
+.hl::before{content:'';position:absolute;top:0;left:0;bottom:0;width:4px;background:#fff;}
+.hl-yr{font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.55);font-weight:700;margin-bottom:.4rem;}
+.hl-title{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:700;color:#fff;margin-bottom:.4rem;}
+.hl-body{font-size:.82rem;color:rgba(255,255,255,.65);line-height:1.7;}
+
+/* PRESS */
+.press-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:1.5rem;}
+.pc{background:var(--white);border:1px solid var(--border2);padding:1.8rem;transition:all .25s;position:relative;overflow:hidden;}
+.pc:hover{border-color:var(--orange);box-shadow:var(--shadow);}
+.pc.big{grid-row:span 2;display:flex;flex-direction:column;justify-content:space-between;}
+.pc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform .3s;}
+.pc:hover::after{transform:scaleX(1);}
+.pc-src{font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--orange);font-weight:700;margin-bottom:.8rem;}
+.pc-hl{font-family:'Cormorant Garamond',serif;font-size:.97rem;font-weight:700;color:var(--ink);line-height:1.5;margin-bottom:.6rem;}
+.pc.big .pc-hl{font-size:1.25rem;}
+.pc-dt{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--light);font-weight:600;}
+
+/* CONTACT */
+#contact{display:grid;grid-template-columns:1fr 1fr;}
+.ct-l{background:var(--orange);padding:5rem 6%;}
+.ct-l-title{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;color:#fff;line-height:1.1;margin-bottom:.5rem;}
+.ct-l-title em{font-style:italic;}
+.ct-l-rule{width:50px;height:3px;background:rgba(255,255,255,.4);margin:1rem 0 1.8rem;}
+.ct-l-desc{font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.85;margin-bottom:2.5rem;}
+.ci{display:flex;gap:.9rem;align-items:flex-start;padding:.9rem 0;border-bottom:1px solid rgba(255,255,255,.15);}
+.ci:last-of-type{border:none;}
+.ci-ico{width:32px;height:32px;background:rgba(255,255,255,.15);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:.82rem;flex-shrink:0;}
+.ci-k{font-size:.55rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:.15rem;font-weight:700;}
+.ci-v{font-size:.85rem;font-weight:700;color:#fff;}
+.party-block{margin-top:2rem;padding:1.2rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);}
+.party-k{font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:.3rem;font-weight:700;}
+.party-v{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:700;color:#fff;}
+.social-row{display:flex;gap:.5rem;margin-top:1.8rem;}
+.sb{width:38px;height:38px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.78rem;font-weight:700;text-decoration:none;transition:all .2s;}
+.sb:hover{background:#fff;color:var(--orange);}
+.ct-r{background:var(--off);padding:5rem 6%;}
+.form-title{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;color:var(--ink);margin-bottom:.3rem;}
+.form-title span{color:var(--orange);font-style:italic;}
+.form-sub{font-size:.85rem;color:var(--mid);margin-bottom:2rem;}
+.fg{margin-bottom:1rem;}
+.fg2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.fl{display:block;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);margin-bottom:.4rem;font-weight:700;}
+.fi,.fse,.fta{width:100%;padding:.75rem 1rem;background:var(--white);border:1.5px solid var(--border2);color:var(--ink);font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;outline:none;transition:border-color .2s;appearance:none;}
+.fi:focus,.fse:focus,.fta:focus{border-color:var(--orange);}
+.fse option{background:var(--white);}
+.fta{resize:vertical;min-height:90px;}
+.fbtn{width:100%;padding:.95rem;background:var(--orange);color:#fff;border:none;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;cursor:pointer;transition:background .2s;border-radius:2px;}
+.fbtn:hover{background:var(--orange2);}
+
+/* GALLERY */
+.gallery-section{padding:5.5rem 8%;background:var(--white);}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:2.5rem;}
+.gitem{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:1/1;background:var(--off2);}
+.gitem:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto;}
+.gitem img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease;}
+.gitem:hover img{transform:scale(1.06);}
+.gitem-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(232,83,26,.7) 0%,transparent 60%);opacity:0;transition:opacity .3s;}
+.gitem:hover .gitem-overlay{opacity:1;}
+.gitem-caption{position:absolute;bottom:0;left:0;right:0;padding:.8rem 1rem;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:#fff;font-weight:700;opacity:0;transition:opacity .3s;transform:translateY(6px);transition:opacity .3s,transform .3s;}
+.gitem:hover .gitem-caption{opacity:1;transform:translateY(0);}
+/* Lightbox */
+.lb{display:none;position:fixed;inset:0;background:rgba(28,10,0,.93);z-index:9999;align-items:center;justify-content:center;padding:2rem;}
+.lb.open{display:flex;}
+.lb-inner{position:relative;max-width:900px;max-height:90vh;width:100%;}
+.lb-img{width:100%;height:100%;max-height:85vh;object-fit:contain;display:block;}
+.lb-close{position:absolute;top:-2.2rem;right:0;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;opacity:.7;transition:opacity .2s;}
+.lb-close:hover{opacity:1;}
+.lb-prev,.lb-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(232,83,26,.7);border:none;color:#fff;font-size:1.4rem;padding:.5rem .9rem;cursor:pointer;border-radius:2px;transition:background .2s;z-index:1;}
+.lb-prev{left:-3.5rem;}
+.lb-next{right:-3.5rem;}
+.lb-prev:hover,.lb-next:hover{background:var(--orange);}
+.lb-counter{position:absolute;bottom:-2rem;left:50%;transform:translateX(-50%);font-size:.62rem;letter-spacing:.15em;color:rgba(255,255,255,.5);text-transform:uppercase;white-space:nowrap;}
+@media(max-width:1100px){.lb-prev{left:0;}.lb-next{right:0;}.lb-inner{padding:0 2.5rem;}}
+
+/* FOOTER */
+footer{background:var(--ink);border-top:3px solid var(--orange);}
+.ft-body{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;padding:3.5rem 8% 2.5rem;border-bottom:1px solid rgba(255,255,255,.08);}
+.ft-brand{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:.5rem;}
+.ft-brand span{color:var(--orange);}
+.ft-tag{font-size:.82rem;color:rgba(255,255,255,.3);line-height:1.75;max-width:260px;}
+.ft-flag{display:flex;height:3px;width:60px;margin-top:1.5rem;}
+.ft-flag span:nth-child(1){flex:1;background:#FF9933;}
+.ft-flag span:nth-child(2){flex:1;background:#fff;}
+.ft-flag span:nth-child(3){flex:1;background:#138808;}
+.ft-heading{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);margin-bottom:1.2rem;font-weight:700;}
+.ft-list{list-style:none;display:flex;flex-direction:column;gap:.5rem;}
+.ft-list a{font-size:.82rem;color:rgba(255,255,255,.3);text-decoration:none;transition:color .2s;}
+.ft-list a:hover{color:var(--orange);}
+.ft-bottom{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 8%;font-size:.58rem;letter-spacing:.08em;color:rgba(255,255,255,.2);flex-wrap:wrap;gap:.5rem;}
+
+/* MOB STICKY */
+.mob-sticky{display:none;position:fixed;bottom:0;left:0;right:0;z-index:900;background:var(--white);border-top:2px solid var(--orange);padding:.7rem 1rem;gap:.7rem;}
+.ms-btn{flex:1;display:flex;align-items:center;justify-content:center;padding:.8rem;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;font-weight:700;border-radius:2px;}
+.ms-call{background:var(--off2);color:var(--orange);border:1.5px solid var(--border2);}
+.ms-write{background:var(--orange);color:#fff;}
+
+/* BTT */
+.btt{position:fixed;bottom:2rem;right:1.5rem;z-index:800;width:44px;height:44px;background:var(--orange);color:#fff;border:none;font-size:1.1rem;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;border-radius:2px;}
+.btt.show{opacity:1;pointer-events:all;}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease;}
+.rv.vis{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}
+
+/* RESPONSIVE */
+@media(max-width:1200px){
+  .hero-left{padding:3.5rem 5% 3.5rem 6%;}
+}
+@media(max-width:1100px){
+  #hero{grid-template-columns:1fr;}
+  .hero-right{display:none;}
+  .hero-left{padding:3rem 8%;}
+  .about-wrap{grid-template-columns:1fr;}
+  .profile-card{position:static;max-width:300px;}
+  .stats-row{grid-template-columns:repeat(2,1fr);}
+  .press-grid{grid-template-columns:1fr 1fr;}
+  .pc.big{grid-row:auto;}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);}
+  .gitem:first-child{grid-column:span 2;grid-row:span 1;aspect-ratio:16/9;}
+}
+@media(max-width:900px){
+  .vision-grid{grid-template-columns:1fr 1fr;}
+  .hl-row{grid-template-columns:1fr;}
+  .hero-stats{grid-template-columns:repeat(2,1fr);}
+  #contact{grid-template-columns:1fr;}
+  .ft-body{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .nav-cta{display:none;}
+  .ham{display:flex;}
+  .section{padding:3.5rem 5%;}
+  .gallery-section{padding:3.5rem 5%;}
+  .gallery-grid{grid-template-columns:1fr 1fr;gap:4px;}
+  .gitem:first-child{grid-column:span 2;aspect-ratio:4/3;}
+  .hero-left{padding:2.5rem 5%;grid-template-columns:1fr;gap:1.5rem;}
+  .hero-portrait-wrap{flex-direction:row;align-items:flex-start;gap:1rem;}
+  .hero-portrait-frame{width:130px;height:170px;flex-shrink:0;}
+  .hero-portrait-nameplate{width:130px;font-size:.75rem;padding:.4rem .5rem;}
+  .hero-stats{grid-template-columns:1fr 1fr;}
+  .vision-grid{grid-template-columns:1fr;}
+  .stats-row{grid-template-columns:1fr 1fr;}
+  .press-grid{grid-template-columns:1fr;}
+  #contact{display:flex;flex-direction:column;}
+  .ft-body{grid-template-columns:1fr;gap:2rem;padding:2.5rem 5%;}
+  .ft-body>div:first-child{grid-column:auto;}
+  .ft-bottom{flex-direction:column;text-align:center;padding:1rem 5%;}
+  .mob-sticky{display:flex;}
+  footer{padding-bottom:68px;}
+  .fg2{grid-template-columns:1fr;}
+  .timeline::before{left:75px;}
+  .te{grid-template-columns:75px 1fr;}
+  .te::after{left:70px;}
+}
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <span>BJP &middot; Anandapur (SC-22) &middot; Keonjhar &middot; Odisha</span>
+  <div class="mh-center"><span>M.A. History &middot; Utkal University</span><span>Blood Group: B+</span><span>Mob: 9348030694</span></div>
+  <span>Seva &middot; Samarpan &middot; Vikas</span>
+</div>
+
+<nav id="nav">
+  <a class="logo" href="#">
+    <div class="logo-mark">&#x1FAB7;</div>
+    <div class="logo-text">
+      <div class="l1">Sarat Kumar Sethy</div>
+      <div class="l2">BJP &middot; Anandapur SC-22</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#vision">Vision</a></li>
+    <li><a href="#achievements">Work</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#press">Press</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Get in Touch</a>
+  <div class="ham" id="ham" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mob-menu" id="mobMenu">
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#journey" onclick="closeMenu()">Journey</a>
+  <a href="#vision" onclick="closeMenu()">Vision</a>
+  <a href="#achievements" onclick="closeMenu()">Achievements</a>
+  <a href="#gallery" onclick="closeMenu()">Gallery</a>
+  <a href="#press" onclick="closeMenu()">Press</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- TICKER — DRAFT NOTE -->
+<div class="ticker-bar">
+  <div class="ticker-tag">&#x1F4E2; Live Updates <span class="draft-pill">DRAFT</span></div>
+  <div class="ticker-scroll"><div class="ticker-inner">
+    <div class="ticker-piece">Working President &mdash; State Co-operative PACS since 2020</div><span class="ticker-sep">&nbsp;&bull;&nbsp;</span>
+    <div class="ticker-piece">Vice-President &mdash; LAMPS Employees Association of India</div><span class="ticker-sep">&nbsp;&bull;&nbsp;</span>
+    <div class="ticker-piece">300+ Workers Brought to BJP &mdash; Keonjhar 2023</div><span class="ticker-sep">&nbsp;&bull;&nbsp;</span>
+    <div class="ticker-piece">Plantation Drives &mdash; Soso, Mareigaon &amp; Habaleswar G.P.</div><span class="ticker-sep">&nbsp;&bull;&nbsp;</span>
+    <div class="ticker-piece">BJP Aspirant &mdash; Anandapur (SC-22), Keonjhar, Odisha</div><span class="ticker-sep">&nbsp;&bull;&nbsp;</span>
+    <div class="ticker-piece">&#x26A0;&#xFE0F; Draft Website &mdash; Content &amp; Photos May Change</div><span class="ticker-sep">&nbsp;&bull;&nbsp;</span>
+    <div class="ticker-piece">Working President &mdash; State Co-operative PACS since 2020</div><span class="ticker-sep">&nbsp;&bull;&nbsp;</span>
+    <div class="ticker-piece">Vice-President &mdash; LAMPS Employees Association of India</div><span class="ticker-sep">&nbsp;&bull;&nbsp;</span>
+    <div class="ticker-piece">300+ Workers Brought to BJP &mdash; Keonjhar 2023</div><span class="ticker-sep">&nbsp;&bull;&nbsp;</span>
+    <div class="ticker-piece">Plantation Drives &mdash; Soso, Mareigaon &amp; Habaleswar G.P.</div><span class="ticker-sep">&nbsp;&bull;&nbsp;</span>
+    <div class="ticker-piece">BJP Aspirant &mdash; Anandapur (SC-22), Keonjhar, Odisha</div><span class="ticker-sep">&nbsp;&bull;&nbsp;</span>
+    <div class="ticker-piece">&#x26A0;&#xFE0F; Draft Website &mdash; Content &amp; Photos May Change</div><span class="ticker-sep">&nbsp;&bull;&nbsp;</span>
+  </div></div>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-pattern"></div>
+
+  <!-- LEFT: text content -->
+  <div class="hero-left">
+    <div class="hero-tag rv">BJP &middot; Anandapur Constituency &middot; SC-22</div>
+    <h1 class="hero-name rv">
+      <span class="firstname">Sarat Kumar</span>
+      <span class="surname">Sethy</span>
+    </h1>
+    <div class="hero-divider rv"><span>Candidate Aspirant</span></div>
+    <div class="hero-constituency rv">
+      <strong>Anandapur (SC-22)</strong>
+      <span>&middot; Keonjhar District &middot; Odisha</span>
+    </div>
+    <p class="hero-desc rv">A dedicated social worker, cooperative leader, and BJP activist with over three decades of grassroots community service across Keonjhar district &mdash; committed to vikas, seva, and empowerment of every family.</p>
+    <div class="hero-btns rv">
+      <a href="#journey" class="btn-orange">Political Journey &rarr;</a>
+      <a href="#contact" class="btn-outline">Get in Touch</a>
+    </div>
+    <div class="hero-stats rv">
+      <div class="hstat"><span class="hstat-n">30+</span><span class="hstat-l">Years Service</span></div>
+      <div class="hstat"><span class="hstat-n">300+</span><span class="hstat-l">Workers to BJP</span></div>
+      <div class="hstat"><span class="hstat-n">SC-22</span><span class="hstat-l">Constituency</span></div>
+      <div class="hstat"><span class="hstat-n">2020</span><span class="hstat-l">PACS President</span></div>
+    </div>
+  </div>
+
+  <!-- RIGHT: full-bleed photo panel with new image -->
+  <div class="hero-right">
+    <img class="hero-right-photo"
+         src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1779710820/b1e1f4a2-dbde-4c41-b95d-8e74a92504c8_xfo4eh.png"
+         alt="Sarat Kumar Sethy — Anandapur">
+    <div class="hero-right-overlay"></div>
+    <div class="hero-right-draft">Draft &mdash; Photo Placeholder</div>
+    <div class="hero-right-caption">
+      <div class="hero-right-name">Sarat Kumar Sethy</div>
+      <div class="hero-right-const">Anandapur &middot; SC-22 &middot; Keonjhar &middot; Odisha</div>
+      <div class="hero-right-badges">
+        <div class="hrb">BJP Member &middot; Keonjhar Unit</div>
+        <div class="hrb">Working President &mdash; State PACS</div>
+        <div class="hrb">M.A. History &middot; Utkal University</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="s-eyebrow rv"><span>Who He Is</span></div>
+  <h2 class="s-title rv">A Life Rooted in <span class="hi">Community Service</span></h2>
+  <div class="s-rule rv"></div>
+  <div class="about-wrap">
+    <div class="profile-card rv">
+      <div class="profile-top">
+        <div class="profile-avatar"><img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1779710826/b1e1f4a2-dbde-4c41-b95d-8e74a92504c8_wswxek.png" alt="Sarat Kumar Sethy"></div>
+        <div class="profile-name">Sarat Kumar Sethy</div>
+        <div class="profile-sub">BJP Aspirant &middot; Anandapur SC-22</div>
+      </div>
+      <div class="profile-data">
+        <div class="prow"><span class="pk">DOB</span><span class="pv">17 April 1975</span></div>
+        <div class="prow"><span class="pk">Mobile</span><span class="pv">9348030694</span></div>
+        <div class="prow"><span class="pk">Blood</span><span class="pv">B+</span></div>
+        <div class="prow"><span class="pk">Education</span><span class="pv">M.A. History</span></div>
+        <div class="prow"><span class="pk">Party</span><span class="pv">BJP</span></div>
+        <div class="prow"><span class="pk">Constituency</span><span class="pv">Anandapur SC-22</span></div>
+        <div class="prow"><span class="pk">District</span><span class="pv">Keonjhar, Odisha</span></div>
+        <div class="prow"><span class="pk">Address</span><span class="pv">Mareigaon, Hatadihi</span></div>
+      </div>
+    </div>
+    <div class="about-content">
+      <p class="about-quote rv">"Service to the people of Anandapur is not just my purpose &mdash; it is my identity and my commitment."</p>
+      <p class="about-body rv">Sarat Kumar Sethy is a dedicated social worker and BJP activist from the Anandapur constituency (SC-22) in Keonjhar district, Odisha. Born on 17 April 1975 to Late Gopinath Sethy, he holds a Master's degree in History from Utkal University, Bhubaneswar.</p>
+      <p class="about-body rv">Having served as a teacher at Jemamani Girls' High School, Mareigaon from 1997 to 2004, Sarat Kumar Sethy built deep connections with the community through education and grassroots social work. His spouse Parbati Sethy is also a teacher, and together they represent a family committed to public service.</p>
+      <p class="about-body rv">Today he serves as Working President of State Co-operative PACS and Vice-President of the LAMPS Employees Association of India, while continuing his tireless work for farmers, cooperative workers, and marginalised people across the region.</p>
+      <div class="about-facts rv">
+        <div class="af"><div class="af-k">Address</div><div class="af-v">Mareigaon, Nandipada, Hatadihi</div></div>
+        <div class="af"><div class="af-k">Block / PS</div><div class="af-v">Hatadihi &middot; Nandipada</div></div>
+        <div class="af"><div class="af-k">Spouse</div><div class="af-v">Parbati Sethy (Teacher)</div></div>
+        <div class="af"><div class="af-k">Focus Areas</div><div class="af-v">Farmers, Education, Cooperatives</div></div>
+        <div class="af"><div class="af-k">Children</div><div class="af-v">Sai Pruthiraj, Pitambar Bhusan</div></div>
+        <div class="af"><div class="af-k">Brothers</div><div class="af-v">Sai Partha Sarathi, Bibhuti Bhusan, Amar</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section id="journey" class="section alt">
+  <div class="s-eyebrow rv"><span>Career &amp; Service</span></div>
+  <h2 class="s-title rv">The <span class="hi">Journey</span> So Far</h2>
+  <div class="s-rule rv"></div>
+  <p class="s-sub rv">From classroom to cooperative boardroom &mdash; three decades of dedicated grassroots service across Keonjhar district.</p>
+  <div class="timeline">
+    <div class="te rv"><div class="te-year">1993</div><div><div class="te-title">Dramatic Secretary &mdash; Anchalika Mahavidyalaya, Hatadihi</div><p class="te-desc">First elected position, demonstrating early leadership in cultural and community activities at college level, Keonjhar.</p></div></div>
+    <div class="te rv"><div class="te-year">1996</div><div><div class="te-title">Students Union President &mdash; Bonth Anchalika Mahavidyalaya</div><p class="te-desc">Elected President of the Students Union, championing student welfare, academic development, and community engagement.</p></div></div>
+    <div class="te rv"><div class="te-year">1997&ndash;2004</div><div><div class="te-title">Teacher &mdash; Jemamani Girls' High School, Mareigaon</div><p class="te-desc">Served for seven years shaping hundreds of young students in Mareigaon, while simultaneously conducting blood donation and medical camps throughout the region.</p></div></div>
+    <div class="te rv"><div class="te-year">2004&ndash;05</div><div><div class="te-title">Director &amp; Asst. Secretary &mdash; Mareigaon Seva Samabaya Samiti</div><p class="te-desc">Elected as Director in 2004 and promoted to Assistant Secretary in 2005, strengthening cooperative services and farmer support in the community.</p></div></div>
+    <div class="te rv"><div class="te-year">2012&ndash;2014</div><div><div class="te-title">Social Relief &mdash; Fire Victims, Salabani, Sadanga, Bancho</div><p class="te-desc">Led relief operations for fire-stricken families and participated actively in Municipality elections in Baripada and Karanjia in 2013.</p></div></div>
+    <div class="te rv"><div class="te-year">2015</div><div><div class="te-title">DCB &amp; State Co-op Bank Directors Elected Under His Leadership</div><p class="te-desc">Under his direct leadership, two directors were elected to the District Co-operative Bank and State Co-operative Bank, Bhubaneswar &mdash; strengthening cooperative representation for Keonjhar.</p></div></div>
+    <div class="te rv"><div class="te-year">2019</div><div><div class="te-title">MLA Candidature &mdash; Anandapur (SC-22)</div><p class="te-desc">Put forward candidacy for the Anandapur assembly seat with significant local support rallied across all Gram Panchayats of the constituency.</p></div></div>
+    <div class="te rv"><div class="te-year">2020&ndash;Now</div><div><div class="te-title">Working President &mdash; State Co-operative PACS &middot; VP, LAMPS</div><p class="te-desc">Serving as Working President of State Co-operative PACS and Vice-President of LAMPS Employees Association of India, championing farmers and cooperative workers across Odisha.</p></div></div>
+    <div class="te rv"><div class="te-year">2023</div><div><div class="te-title">300+ Workers Brought into BJP &mdash; Keonjhar, Panchugochhia, Bancho</div><p class="te-desc">100+ workers at Hadagarh &amp; Panchugochhia and 200+ workers from Congress &amp; BJD joined BJP at Bancho under his direct leadership &mdash; a landmark organisational achievement.</p></div></div>
+    <div class="te rv"><div class="te-year">Present</div><div><div class="te-title">BJP Aspirant, Anandapur SC-22 &mdash; Continuing People's Service</div><p class="te-desc">Continuing grassroots work through plantation programmes, the Mera Miti Mera Desh initiative, and leading anti-corruption drives in Mareigaon, Jambhira, and Panchugochhia G.P.s.</p></div></div>
+  </div>
+</section>
+
+<!-- VISION -->
+<section id="vision" class="section">
+  <div class="s-eyebrow rv"><span>Our Vision</span></div>
+  <h2 class="s-title rv">Building a <span class="hi">Better Anandapur</span></h2>
+  <div class="s-rule rv"></div>
+  <p class="s-sub rv">Six pillars guiding every initiative and effort for the people of Anandapur constituency.</p>
+  <div class="vision-grid">
+    <div class="vc rv"><div class="vc-stripe"></div><span class="vc-num">01</span><span class="vc-icon">&#x1F33E;</span><div class="vc-title">Farmer Empowerment</div><p class="vc-text">Strengthening cooperative credit access, PACS reform, and direct market linkages for farmers across all villages of Anandapur block.</p></div>
+    <div class="vc rv d1"><div class="vc-stripe"></div><span class="vc-num">02</span><span class="vc-icon">&#x1F4DA;</span><div class="vc-title">Education for All</div><p class="vc-text">Improving school infrastructure and ensuring SC community children have full access to scholarships and higher education pathways.</p></div>
+    <div class="vc rv d2"><div class="vc-stripe"></div><span class="vc-num">03</span><span class="vc-icon">&#x1F3E5;</span><div class="vc-title">Health &amp; Welfare</div><p class="vc-text">Regular medical camps, blood donation drives, and accessible primary healthcare for every village in the constituency.</p></div>
+    <div class="vc rv"><div class="vc-stripe"></div><span class="vc-num">04</span><span class="vc-icon">&#x2696;&#xFE0F;</span><div class="vc-title">Anti-Corruption</div><p class="vc-text">Zero tolerance for corruption in Gram Panchayats. Already led successful drives in Mareigaon, Jambhira, and Panchugochhia G.P.s.</p></div>
+    <div class="vc rv d1"><div class="vc-stripe"></div><span class="vc-num">05</span><span class="vc-icon">&#x1F91D;</span><div class="vc-title">Cooperative Reform</div><p class="vc-text">Reforming PACS and LAMPS institutions to genuinely serve farmers, tribal communities, and daily-wage workers across Keonjhar.</p></div>
+    <div class="vc rv d2"><div class="vc-stripe"></div><span class="vc-num">06</span><span class="vc-icon">&#x1F333;</span><div class="vc-title">Green Anandapur</div><p class="vc-text">Continuing plantation programmes across Soso, Mareigaon, and Habaleswar Gram Panchayats as part of the Mera Miti Mera Desh initiative.</p></div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements" class="ach-section">
+  <div class="s-eyebrow rv" style="--orange:#fff;"><span style="color:rgba(255,255,255,.7);letter-spacing:.22em;font-size:.62rem;text-transform:uppercase;font-weight:700;">Track Record</span></div>
+  <h2 class="s-title lt rv">Measurable <span class="hi">Impact</span></h2>
+  <div class="s-rule lt rv"></div>
+  <p class="s-sub lt rv">Numbers representing years of dedicated service, community building, and political work across Keonjhar district.</p>
+  <div class="stats-row">
+    <div class="sbox rv"><div class="sbox-n">30<sup>+</sup></div><div class="sbox-l">Years of Service</div></div>
+    <div class="sbox rv d1"><div class="sbox-n">300<sup>+</sup></div><div class="sbox-l">Workers Brought to BJP</div></div>
+    <div class="sbox rv d2"><div class="sbox-n">7<sup>+</sup></div><div class="sbox-l">Years as Teacher</div></div>
+    <div class="sbox rv d3"><div class="sbox-n">2</div><div class="sbox-l">DCB Directors Elected</div></div>
+    <div class="sbox rv"><div class="sbox-n">14<sup>yr</sup></div><div class="sbox-l">Raja Mahotsava Led</div></div>
+    <div class="sbox rv d1"><div class="sbox-n">3<sup>+</sup></div><div class="sbox-l">GPs Anti-Corruption</div></div>
+    <div class="sbox rv d2"><div class="sbox-n">2</div><div class="sbox-l">Girls Helped to Marry</div></div>
+    <div class="sbox rv d3"><div class="sbox-n">2020</div><div class="sbox-l">PACS President Since</div></div>
+  </div>
+  <div class="hl-row">
+    <div class="hl rv"><div class="hl-yr">2020 &mdash; Present</div><div class="hl-title">Working President &mdash; State Co-operative PACS</div><p class="hl-body">Leading PACS as Working President since 2020, championing farmer welfare and fair cooperative governance across Odisha.</p></div>
+    <div class="hl rv d1"><div class="hl-yr">Ongoing</div><div class="hl-title">Vice-President &mdash; LAMPS Employees Association</div><p class="hl-body">Representing thousands of cooperative workers and advocating for their rights and service security at the national level.</p></div>
+    <div class="hl rv d2"><div class="hl-yr">2023</div><div class="hl-title">300+ Workers Brought to BJP &mdash; Keonjhar</div><p class="hl-body">100+ at Hadagarh &amp; Panchugochhia, plus 200+ from Congress &amp; BJD into BJP at Bancho in a landmark membership drive.</p></div>
+  </div>
+</section>
+
+<!-- PRESS -->
+<section id="press" class="section alt">
+  <div class="s-eyebrow rv"><span>In the News</span></div>
+  <h2 class="s-title rv">Media <span class="hi">Coverage</span></h2>
+  <div class="s-rule rv"></div>
+  <p class="s-sub rv">Coverage of Sarat Kumar Sethy's grassroots work and political activities across Keonjhar and Anandapur constituency.</p>
+  <div class="press-grid">
+    <div class="pc big rv"><div><div class="pc-src">Local &amp; Regional Press</div><div class="pc-hl">BJP aspirant Sarat Kumar Sethy leads massive booth-level party strengthening drive &mdash; over 300 workers from rival parties join BJP in Keonjhar under his leadership</div></div><div class="pc-dt">2023</div></div>
+    <div class="pc rv"><div class="pc-src">Keonjhar District News</div><div class="pc-hl">PACS Working President Sethy holds cooperative reform meeting &mdash; demands fair credit access for SC farmers in Anandapur block</div><div class="pc-dt">2022</div></div>
+    <div class="pc rv"><div class="pc-src">Odia Community Media</div><div class="pc-hl">Sarat Kumar Sethy leads anti-corruption drive in Mareigaon, Jambhira and Panchugochhia Gram Panchayats &mdash; locals rally behind movement</div><div class="pc-dt">2023</div></div>
+    <div class="pc rv"><div class="pc-src">LAMPS Association</div><div class="pc-hl">VP Sethy represents LAMPS workers at state-level conference &mdash; pushes for wage parity and service security</div><div class="pc-dt">2021</div></div>
+    <div class="pc rv"><div class="pc-src">District Cooperative Report</div><div class="pc-hl">Under Sethy's leadership, two directors elected to DCB and State Co-operative Bank, Bhubaneswar &mdash; milestone for Keonjhar cooperatives</div><div class="pc-dt">2015</div></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="gallery-section">
+  <div class="s-eyebrow rv"><span>Photo Gallery</span></div>
+  <h2 class="s-title rv">On the <span class="hi">Ground</span></h2>
+  <div class="s-rule rv"></div>
+  <p class="s-sub rv">Moments from the field &mdash; community events, party activities, and grassroots work across Keonjhar and Anandapur constituency.</p>
+  <div class="gallery-grid">
+    <div class="gitem rv" onclick="openLb(0)">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1779775378/WhatsApp_Image_2026-05-25_at_10.11.47_dzxeus.jpg" alt="Community Event" loading="lazy">
+      <div class="gitem-overlay"></div>
+      <div class="gitem-caption">Community Event</div>
+    </div>
+    <div class="gitem rv d1" onclick="openLb(1)">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1779775378/8469c3ca-7404-4758-a3ef-d60827c44ff0_rjrirg.jpg" alt="BJP Activity" loading="lazy">
+      <div class="gitem-overlay"></div>
+      <div class="gitem-caption">BJP Activity</div>
+    </div>
+    <div class="gitem rv d2" onclick="openLb(2)">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1779775378/WhatsApp_Image_2026-05-25_at_10.11.45_ev37in.jpg" alt="Grassroots Outreach" loading="lazy">
+      <div class="gitem-overlay"></div>
+      <div class="gitem-caption">Grassroots Outreach</div>
+    </div>
+    <div class="gitem rv d3" onclick="openLb(3)">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1779775378/WhatsApp_Image_2026-05-25_at_10.11.46_hiywnm.jpg" alt="Party Programme" loading="lazy">
+      <div class="gitem-overlay"></div>
+      <div class="gitem-caption">Party Programme</div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" onclick="closeLbOutside(event)">
+  <div class="lb-inner">
+    <button class="lb-close" onclick="closeLb()">&times;</button>
+    <button class="lb-prev" onclick="lbStep(-1)">&#8249;</button>
+    <img class="lb-img" id="lbImg" src="" alt="">
+    <button class="lb-next" onclick="lbStep(1)">&#8250;</button>
+    <div class="lb-counter" id="lbCounter"></div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="ct-l">
+    <h2 class="ct-l-title">Reach <em>Sarat Kumar Sethy</em></h2>
+    <div class="ct-l-rule"></div>
+    <p class="ct-l-desc">For constituency matters, cooperative issues, BJP activities, or community support. All messages are personally reviewed and responded to.</p>
+    <div class="ci"><div class="ci-ico">&#x1F4CD;</div><div><div class="ci-k">Address</div><div class="ci-v">AT/PO: Mareigaon, PS: Nandipada, Block: Hatadihi</div></div></div>
+    <div class="ci"><div class="ci-ico">&#x1F5FA;&#xFE0F;</div><div><div class="ci-k">Constituency</div><div class="ci-v">Anandapur (SC-22), Dist: Keonjhar &ndash; 758083</div></div></div>
+    <div class="ci"><div class="ci-ico">&#x1F4F1;</div><div><div class="ci-k">Mobile</div><div class="ci-v">9348030694 &middot; 9078982511</div></div></div>
+    <div class="ci"><div class="ci-ico">&#x1F3DB;&#xFE0F;</div><div><div class="ci-k">Organization</div><div class="ci-v">Working President &mdash; State Co-operative PACS</div></div></div>
+    <div class="party-block"><div class="party-k">Party Affiliation</div><div class="party-v">Bharatiya Janata Party &middot; Anandapur Unit &middot; Keonjhar</div></div>
+    <div class="social-row"><a class="sb" href="#">X</a><a class="sb" href="#">f</a><a class="sb" href="#">YT</a></div>
+  </div>
+  <div class="ct-r">
+    <div class="form-title">Write to <span>Sarat Kumar Sethy</span></div>
+    <p class="form-sub">Share your concern, suggestion, or support. Our team reviews every submission promptly.</p>
+    <div class="fg2">
+      <div class="fg"><label class="fl">Full Name *</label><input type="text" class="fi" placeholder="Your full name"></div>
+      <div class="fg"><label class="fl">Mobile *</label><input type="tel" class="fi" placeholder="+91 XXXXX XXXXX"></div>
+    </div>
+    <div class="fg2">
+      <div class="fg"><label class="fl">Village / Ward</label><input type="text" class="fi" placeholder="Your village or ward"></div>
+      <div class="fg"><label class="fl">Subject *</label>
+        <select class="fse">
+          <option value="">Select a subject</option>
+          <option>Cooperative / PACS Matter</option>
+          <option>Road / Infrastructure</option>
+          <option>Farmer / Agricultural Issue</option>
+          <option>Education / School</option>
+          <option>BJP Party Matter</option>
+          <option>Social Service Request</option>
+          <option>Anti-Corruption Complaint</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
+    <div class="fg"><label class="fl">Your Message *</label><textarea class="fta" placeholder="Describe your concern or suggestion..."></textarea></div>
+    <button class="fbtn" onclick="handleSubmit(this)">Submit Message &rarr;</button>
+  </div>
+</section>
+
+<footer>
+  <div class="ft-body">
+    <div>
+      <div class="ft-brand">Sarat Kumar <span>Sethy</span></div>
+      <p class="ft-tag">BJP Aspirant, Anandapur (SC-22), Keonjhar, Odisha. Working President &mdash; State Co-operative PACS. Committed to grassroots service and inclusive development.</p>
+      <div class="ft-flag"><span></span><span></span><span></span></div>
+    </div>
+    <div>
+      <div class="ft-heading">Quick Links</div>
+      <ul class="ft-list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#journey">Political Journey</a></li>
+        <li><a href="#vision">Vision &amp; Policy</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#press">Media Coverage</a></li>
+        <li><a href="#contact">Contact Office</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="ft-heading">Organizations</div>
+      <ul class="ft-list">
+        <li><a href="#">BJP Keonjhar Unit</a></li>
+        <li><a href="#">State Co-op PACS</a></li>
+        <li><a href="#">LAMPS Association</a></li>
+        <li><a href="#">Satyasai Seva Sangha</a></li>
+        <li><a href="#">Driver's Association</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <span>&copy; 2025 Sarat Kumar Sethy. Official Website. BJP Aspirant &mdash; Anandapur (SC-22), Keonjhar, Odisha.</span>
+    <span>Jai Odisha &#x1F1EE;&#x1F1F3; &middot; Jai BJP &#x1FAB7;</span>
+  </div>
+</footer>
+
+<div class="mob-sticky">
+  <a href="tel:9348030694" class="ms-btn ms-call">&#x1F4DE; Call Office</a>
+  <a href="#contact" class="ms-btn ms-write">&#x2709;&#xFE0F; Write to Us</a>
+</div>
+<button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
+
+<script>
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vis');io.unobserve(x.target);}});},{threshold:.08});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+window.addEventListener('scroll',function(){
+  var sy=window.scrollY;
+  document.getElementById('btt').classList.toggle('show',sy>500);
+  var cur='';
+  document.querySelectorAll('section[id]').forEach(function(s){if(sy>=s.offsetTop-120)cur=s.id;});
+  document.querySelectorAll('.nav-links a').forEach(function(a){a.classList.toggle('act',a.getAttribute('href')==='#'+cur);});
+});
+function toggleMenu(){document.getElementById('mobMenu').classList.toggle('open');}
+function closeMenu(){document.getElementById('mobMenu').classList.remove('open');}
+function handleSubmit(btn){
+  btn.textContent='Submitted \u2014 Thank You!';
+  btn.style.background='#2D7A4F';
+  setTimeout(function(){btn.textContent='Submit Message \u2192';btn.style.background='';},3500);
+}
+var lbImgs=[
+  'https://res.cloudinary.com/dxmdcoca3/image/upload/v1779775378/WhatsApp_Image_2026-05-25_at_10.11.47_dzxeus.jpg',
+  'https://res.cloudinary.com/dxmdcoca3/image/upload/v1779775378/8469c3ca-7404-4758-a3ef-d60827c44ff0_rjrirg.jpg',
+  'https://res.cloudinary.com/dxmdcoca3/image/upload/v1779775378/WhatsApp_Image_2026-05-25_at_10.11.45_ev37in.jpg',
+  'https://res.cloudinary.com/dxmdcoca3/image/upload/v1779775378/WhatsApp_Image_2026-05-25_at_10.11.46_hiywnm.jpg'
+];
+var lbIdx=0;
+function openLb(i){lbIdx=i;document.getElementById('lbImg').src=lbImgs[i];document.getElementById('lbCounter').textContent=(i+1)+' / '+lbImgs.length;document.getElementById('lb').classList.add('open');document.body.style.overflow='hidden';}
+function closeLb(){document.getElementById('lb').classList.remove('open');document.body.style.overflow='';}
+function closeLbOutside(e){if(e.target===document.getElementById('lb'))closeLb();}
+function lbStep(d){lbIdx=(lbIdx+d+lbImgs.length)%lbImgs.length;document.getElementById('lbImg').src=lbImgs[lbIdx];document.getElementById('lbCounter').textContent=(lbIdx+1)+' / '+lbImgs.length;}
+document.addEventListener('keydown',function(e){var lb=document.getElementById('lb');if(!lb.classList.contains('open'))return;if(e.key==='ArrowRight')lbStep(1);if(e.key==='ArrowLeft')lbStep(-1);if(e.key==='Escape')closeLb();});
+</script>
+</body>
+</html>
